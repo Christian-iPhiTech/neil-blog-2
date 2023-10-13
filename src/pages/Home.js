@@ -1,20 +1,32 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import BlogList from "../components/Blog-list";
+import Loader from "react-spinners/PulseLoader";
+import useFetch from '../customhooks/useFetch';
 
 const Home = () => {
-    const [blogs, setBlogs] = useState([
-        { title: 'How to Become a Superhero', description: 'Learn the steps to become a real-life superhero and save the day!', author: 'Superman', id: 1 },
-        { title: 'Gotham\'s Dark Knight: The Story of Batman', description: 'Discover the origin and journey of Batman in Gotham City.', author: 'Wonder Woman', id: 2 },
-        { title: 'The Bat-Signal: A Beacon of Hope', description: 'Explore the significance of the Bat-Signal in Batman\'s crime-fighting world.', author: 'The Flash', id: 3 },
-        { title: 'Batmobile: Engineering Marvel of the Dark Knight', description: 'Uncover the secrets behind the iconic Batmobile design.', author: 'Green Lantern', id: 4 }
-    ])    
-    useEffect(() => {
-        
-    }, [])
+    const{data: blogs, isLoading, error} = useFetch('http://localhost:8000/blogs')
+
+    const [color, setColor] = useState("#222"); 
+    const override: CSSProperties = {
+        display: "block",
+        margin: "0 auto",
+    };
+    
     return ( 
         <div className="max-w-screen-xl w-full flex flex-col justify-center items-betweek gap-12 py-[50px]">
             <h1>Blogs to my welcome</h1>
-            <BlogList blogs={blogs}/>
+            { error && <div><p className='errorMessage'>{error}</p></div>}
+            { isLoading && 
+                <Loader
+                color={color}
+                loading={isLoading}
+                cssOverride={override}
+                size={25}
+                aria-label="Loading Spinner"
+                data-testid="loading"
+                />
+            }
+            {blogs && <BlogList blogs={blogs}/>}            
         </div>
     );
 }
