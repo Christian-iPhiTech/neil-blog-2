@@ -1,28 +1,58 @@
 {
   "blogs": [
     {
-      "title": "How to Become a Superhero",
-      "description": "Learn the steps to become a real-life superhero and save the day!",
-      "author": "Superman",
+      "title": "10 Tips for Effective Time Management",
+      "description": "Learn how to manage your time more efficiently and boost your productivity.",
+      "author": "John Smith",
       "id": 1
     },
     {
-      "title": "Gotham's Dark Knight: The Story of Batman",
-      "description": "Discover the origin and journey of Batman in Gotham City.",
-      "author": "Wonder Woman",
+      "title": "The Art of Cooking: A Culinary Adventure",
+      "description": "Explore the world of culinary delights and discover the secrets of great cooking.",
+      "author": "Emily Jones",
       "id": 2
     },
     {
-      "title": "The Bat-Signal: A Beacon of Hope",
-      "description": "Explore the significance of the Bat-Signal in Batman's crime-fighting world.",
-      "author": "The Flash",
+      "title": "Traveling on a Budget: A Guide to Affordable Adventures",
+      "description": "Find out how to travel the world without breaking the bank and create unforgettable memories.",
+      "author": "David Brown",
       "id": 3
     },
     {
-      "title": "Batmobile: Engineering Marvel of the Dark Knight",
-      "description": "Uncover the secrets behind the iconic Batmobile design.",
-      "author": "Green Lantern",
+      "title": "The Power of Positive Thinking",
+      "description": "Unlock the potential of your mind and embrace a more positive and fulfilling life.",
+      "author": "Sophia Adams",
       "id": 4
+    },
+    {
+      "title": "Mastering the Art of Photography: From Beginner to Pro",
+      "description": "Embark on a photographic journey and learn the fundamentals of capturing stunning images.",
+      "author": "Michael Wilson",
+      "id": 5
+    },
+    {
+      "title": "Healthy Eating Habits for a Happy Life",
+      "description": "Discover the importance of a balanced diet and how it can positively impact your well-being.",
+      "author": "Laura Miller",
+      "id": 6
+    },
+    {
+      "title": "Sustainable Living: Reducing Your Carbon Footprint",
+      "description": "Explore eco-friendly practices that help protect the planet and reduce environmental impact.",
+      "author": "Daniel Green",
+      "id": 7
+    },
+    {
+      "title": "The Science of Space Exploration: Journey to the Stars",
+      "description": "Delve into the mysteries of the universe and learn about the latest developments in space exploration.",
+      "author": "Amanda Carter",
+      "id": 8
+    },
+    {
+      "title": "Mindfulness Meditation: Finding Inner Peace and Clarity",
+      "description": "Discover the benefits of mindfulness meditation and how it can bring calm and clarity to your life.",
+      "author": "Ryan Mitchell",
+      "id": 9
     }
   ]
 }
