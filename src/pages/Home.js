@@ -4,22 +4,25 @@ import useFetch from '../customhooks/useFetch';
 import { useState } from "react";
 
 const Home = () => {
-    const{data: blogs, isLoading, error} = useFetch('http://localhost:8000/blogs')
-    const [isDeleting, setIsDeleting] = useState(false)
+    const{data: blogs, isLoading, error, deleteBlog} = useFetch('http://localhost:8000/blogs')
+    const [isDeleting, setIsDeleting] = useState({
+        loading: false, id: null
+    })
 
     const color= "#222"; 
-    const override: CSSProperties = {
+    const override = {
         display: "block",
         margin: "0 auto",
     };
 
     const handleDelete = (id) => {
-        setIsDeleting(true)
+        setIsDeleting({loading: true, id})
         setTimeout(() => {
             fetch('http://localhost:8000/blogs/'+id,{
                 method: 'DELETE'
             }).then(() => {
-                setIsDeleting(false)
+                deleteBlog(id)
+                setIsDeleting({loading: false, id})
             })
         }, 1000)
     }

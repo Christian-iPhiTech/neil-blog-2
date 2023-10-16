@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import BlogDetails from './pages/BlogDetails';
 import CreateBlog from './pages/CreateBlog';
 import NotFound from './pages/NotFound';
+import UpdateBlog from './pages/UpdateBlog';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route index element={<Home />}/>
             <Route path="create" element={<CreateBlog />}/>
             <Route path="blogs/:title/:id" element={<BlogDetails />}/>
+            <Route path="update/:id" element={<UpdateBlog />}/>
             <Route path="*" element={<NotFound />}/>
           </Routes>
         </main>
